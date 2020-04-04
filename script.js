@@ -63,13 +63,13 @@ let appData = {
         do {
             items = prompt('Что принесет дополнительный доход? (Перечислите через запятую)', '');
             }
-            while (typeof(items)=== Number || items == "" || items == null);
+            while (typeof(items)=== "Number" || items == "" || items == null);
         appData.income = items.split(', ');
         let additionalItem;
         do {
             additionalItem = prompt('Может что-то еще?', '');
             }
-            while (typeof(additionalItem)=== Number || additionalItem == "" || additionalItem == null);
+            while (typeof(additionalItem)=== "Number" || additionalItem == "" || additionalItem == null);
         appData.income.push(additionalItem);
         appData.income.sort();
         let listOfIncomes = 'Способы дополнительного заработка: ';
